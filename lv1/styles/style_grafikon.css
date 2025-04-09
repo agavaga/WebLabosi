@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    font-family: monospace;
+    width: 280px;
+}
+
+nav h2 {
+    text-align: left;
+    padding-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background: grey;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    padding: 1rem;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+nav ul li:hover {
+    background: blue;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dropdown menu styles */
+nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: gray;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    min-width: 150px;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+nav ul li:hover > ul,
+nav ul li:focus-within > ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul li ul li {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+}
+
+nav ul li ul li:hover {
+    background: #555;
+}
+
+main section,
+main article,
+aside {
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.bar-chart-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bar-chart {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.bar {
+    position: relative;
+    margin-bottom: 8px;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.bar::after {
+    content: attr(data-value);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.bar-1 { width: 68%; background-color: #000; }
+.bar-2 { width: 33%; background-color: #262626; }
+.bar-3 { width: 85%; background-color: #494949; }
+.bar-4 { width: 75%; background-color: #7d7d7d; }
+.bar-5 { width: 99%; background-color: #b3b3b3; }
+.bar-6 { width: 33%; background-color: #e0dfdf; }
+
+.label {
+    padding-left: 10px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    font-size: 0.9em;
+}

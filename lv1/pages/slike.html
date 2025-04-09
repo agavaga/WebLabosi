@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery and Portfolio</title>
+  <link rel="stylesheet" href="../styles/style_slike.css">
+</head>
+<body>
+	<h1>Galerija slika</h1>
+  <nav aria-labelledby="primarna-navigacija">
+		<h2 id="primarna-navigacija">Primarna navigacija</h2>
+		<ul>
+			<li><a href="../index.html">Početna</a></li>
+			<li><a href="grafikon.html">Grafovi</a></li>
+			<li><a href="slike.html">Slike</a></li>
+		</ul>
+	</nav>
+  <section class="galerija"> 
+
+    <!-- Image thumbnails and links to full-sized images -->
+    <figure class="galerija_slika">
+      <a href="#image1">
+        <img src="https://unsplash.it/300/200?random=1" alt="Slika 1">
+      </a>
+      <figcaption>Slika 1</figcaption>
+    </figure>
+    
+    <figure class="galerija_slika">
+      <a href="#image2">
+        <img src="https://unsplash.it/300/200?random=2" alt="Slika 2">
+      </a>
+      <figcaption>Slika 2</figcaption>
+    </figure>
+    
+    <figure class="galerija_slika">
+      <a href="#image3">
+        <img src="https://unsplash.it/300/200?random=3" alt="Slika 3">
+      </a>
+      <figcaption>Slika 3</figcaption>
+    </figure>
+    
+  </section>
+
+  <div id="image1" class="lightbox">
+    <div class="lightbox-content">
+      <img src="https://unsplash.it/900/?random=1" alt="Slika 1">
+      <a href="#" class="close-lightbox">✖</a>
+    </div>
+  </div>
+  
+  <div id="image2" class="lightbox">
+    <div class="lightbox-content">
+      <img src="https://unsplash.it/900/?random=2" alt="Slika 2">
+      <a href="#" class="close-lightbox">✖</a>
+    </div>
+  </div>
+  
+  <div id="image3" class="lightbox">
+    <div class="lightbox-content">
+      <img src="https://unsplash.it/900/?random=3" alt="Slika 3">
+      <a href="#" class="close-lightbox">✖</a>
+    </div>
+  </div>
+</body>
+</html>
