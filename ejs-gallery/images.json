@@ -1,0 +1,32 @@
+[
+    {
+      "url": "/images/photo1.jpg",
+      "id": "slika1",
+      "title": "Slika 1",
+      "largeUrl": "/images/photo1.jpg"
+    },
+    {
+      "url": "/images/photo2.jpg",
+      "id": "slika2",
+      "title": "Slika 2",
+      "largeUrl": "/images/photo2.jpg"
+    },
+    {
+      "url": "/images/photo3.jpg",
+      "id": "slika3",
+      "title": "Slika 3",
+      "largeUrl": "/images/photo3.jpg"
+    },
+    {
+      "url": "/images/photo4.jpg",
+      "id": "slika4",
+      "title": "Slika 4",
+      "largeUrl": "/images/photo4.jpg"
+    },
+    {
+      "url": "/images/photo5.jpg",
+      "id": "slika5",
+      "title": "Slika 5",
+      "largeUrl": "/images/photo5.jpg"
+    }
+  ]

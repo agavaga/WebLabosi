@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EJS Galerija">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+  <section class="galerija" aria-label="Galerija slika">
+    <h1>Image Gallery</h1>
+    <div class="galerija_slike">
+      <% images.forEach(image => { %>
+        <figure class="galerija_slika">
+          <input type="checkbox" id="<%= image.id %>">
+          <label for="<%= image.id %>">
+            <img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy">
+          </label>
+          <figcaption><%= image.title %></figcaption>
+
+          <div class="lightbox">
+            <img src="<%= image.largeUrl || image.url %>" alt="<%= image.title %> - Large">
+            <label for="<%= image.id %>" class="lightbox-close" aria-label="Close">&times;</label>
+          </div>
+        </figure>
+      <% }); %>
+    </div>
+  </section>
+</body>
+</html>
