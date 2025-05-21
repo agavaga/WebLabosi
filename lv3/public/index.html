@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualna Videoteka</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include PapaParse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Virtualna Videoteka</h1>
+        <p>Web programiranje - LV3 - JavaScript 2024./2025.</p>
+    </header>
+
+    <main>
+        <!-- Task 1: Data Display Section -->
+        <section id="data-display">
+            <h2>Prikaz filmova</h2>
+            <table id="movies-table">
+                <thead>
+                    <tr>
+                        <th>Naslov</th>
+                        <th>Godina</th>
+                        <th>Žanr</th>
+                        <th>Trajanje</th>
+                        <th>Država</th>
+                        <th>Ocjena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Task 2: Filtering Section -->
+        <section id="filtering">
+            <h2>Filtriranje filmova</h2>
+            <div id="filters">
+                <!-- Genre Filter (dropdown) -->
+                <div class="filter-item">
+                    <label for="filter-genre">Žanr:</label>
+                    <select id="filter-genre">
+                        <option value="">-- Odaberi žanr --</option>
+                        <!-- Options will be dynamically populated -->
+                    </select>
+                </div>
+
+                <!-- Year Range Filter (number inputs) -->
+                <div class="filter-item">
+                    <label for="filter-year-from">Godina od:</label>
+                    <input type="number" id="filter-year-from" min="1900" max="2025" placeholder="Od">
+                    <label for="filter-year-to">do:</label>
+                    <input type="number" id="filter-year-to" min="1900" max="2025" placeholder="Do">
+                </div>
+
+                <!-- Country Filter (text input) -->
+                <div class="filter-item">
+                    <label for="filter-country">Država:</label>
+                    <input type="text" id="filter-country" placeholder="Unesi državu">
+                </div>
+
+                <!-- Rating Filter (slider) -->
+                <div class="filter-item">
+                    <label for="filter-rating">Minimalna ocjena: <span id="rating-value">0</span></label>
+                    <input type="range" id="filter-rating" min="0" max="10" step="0.1" value="0">
+                </div>
+
+                <!-- Apply Filters Button -->
+                <button id="apply-filters">Filtriraj</button>
+            </div>
+
+            <!-- Display filtered results -->
+            <div id="filtered-results">
+                <h3>Rezultati filtriranja</h3>
+                <table id="filtered-table">
+                    <thead>
+                        <tr>
+                            <th>Naslov</th>
+                            <th>Godina</th>
+                            <th>Žanr</th>
+                            <th>Trajanje</th>
+                            <th>Država</th>
+                            <th>Ocjena</th>
+                            <th>Akcije</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filtered data will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Task 3: Cart Section -->
+    <aside id="cart">
+        <h2>Moja košarica</h2>
+        <div id="cart-content">
+            <ul id="cart-list">
+                <!-- Cart items will be dynamically inserted here -->
+            </ul>
+        </div>
+        <div id="cart-actions">
+            <p id="cart-count">Broj filmova u košarici: <span>0</span></p>
+            <button id="confirm-cart">Potvrdi odabir</button>
+        </div>
+    </aside>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
